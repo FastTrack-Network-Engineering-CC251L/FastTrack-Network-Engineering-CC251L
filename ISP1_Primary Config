@@ -1,0 +1,62 @@
+Router>
+Router>en
+Router#config ter
+Router#config terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname ISP1_Primary
+ISP1_Primary(config)#inter
+ISP1_Primary(config)#interface gig
+ISP1_Primary(config)#interface gigabitEthernet 0/0
+ISP1_Primary(config-if)#ip add
+ISP1_Primary(config-if)#ip address 203.0.113.1 255.255.255.252
+ISP1_Primary(config-if)#no shut
+ISP1_Primary(config-if)#no shutdown 
+
+ISP1_Primary(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+ISP1_Primary(config-if)#ex
+ISP1_Primary(config)#inter
+ISP1_Primary(config)#interface loopba
+ISP1_Primary(config)#interface loopback 0
+
+ISP1_Primary(config-if)#
+%LINK-3-UPDOWN: Interface Loopback0, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+
+ISP1_Primary(config-if)#ip address 8.8.8.8 255.255.255.255
+ISP1_Primary(config-if)#no shutdown
+ISP1_Primary(config-if)#ip rout
+ISP1_Primary(config-if)#ex
+ISP1_Primary(config)#ip route 192.168.0.0 255.255.0.0 203.0.113.2
+ISP1_Primary(config)#end
+ISP1_Primary#
+%SYS-5-CONFIG_I: Configured from console by console
+
+ISP1_Primary#write memo
+Building configuration...
+[OK]
+ISP1_Primary#
+ISP1_Primary#
+ISP1_Primary#
+ISP1_Primary#
+
+
+ISP1_Primary con0 is now available
+
+Press RETURN to get started.
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
