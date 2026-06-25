@@ -1,0 +1,24 @@
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW_Mgmt
+SW_Mgmt(config)#vlan 50
+SW_Mgmt(config-vlan)# name Management
+SW_Mgmt(config-vlan)#exit
+SW_Mgmt(config)#interface GigabitEthernet0/1
+SW_Mgmt(config-if)# switchport mode trunk
+SW_Mgmt(config-if)# switchport trunk allowed vlan 50
+SW_Mgmt(config-if)# no shutdown
+SW_Mgmt(config-if)#interface range FastEthernet0/2 - 3
+SW_Mgmt(config-if-range)# switchport mode access
+SW_Mgmt(config-if-range)# switchport access vlan 50
+SW_Mgmt(config-if-range)# no shutdown
+SW_Mgmt(config-if-range)#end
+SW_Mgmt#write memory
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+SW_Mgmt#
+SW_Mgmt#
+
