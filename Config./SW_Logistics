@@ -1,0 +1,25 @@
+Switch>
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW_Logistics
+SW_Logistics(config)#vlan 30
+SW_Logistics(config-vlan)# name Logistics
+SW_Logistics(config-vlan)#exit
+SW_Logistics(config)#interface GigabitEthernet0/1
+SW_Logistics(config-if)# switchport mode trunk
+SW_Logistics(config-if)# switchport trunk allowed vlan 30
+SW_Logistics(config-if)# no shutdown
+SW_Logistics(config-if)#interface range FastEthernet0/2 - 3
+SW_Logistics(config-if-range)# switchport mode access
+SW_Logistics(config-if-range)# switchport access vlan 30
+SW_Logistics(config-if-range)# no shutdown
+SW_Logistics(config-if-range)#end
+SW_Logistics#write memory
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
+SW_Logistics#
+SW_Logistics#
+SW_Logistics#
