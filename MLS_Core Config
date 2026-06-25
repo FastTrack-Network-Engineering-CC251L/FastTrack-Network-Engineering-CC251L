@@ -1,0 +1,206 @@
+Current configuration : 3725 bytes
+!
+version 12.2(37)SE1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname MLS_Core
+!
+!
+no profinet
+!
+!
+ip dhcp excluded-address 192.168.10.1 192.168.10.9
+ip dhcp excluded-address 192.168.20.1 192.168.20.9
+ip dhcp excluded-address 192.168.30.1 192.168.30.9
+ip dhcp excluded-address 192.168.40.1 192.168.40.9
+ip dhcp excluded-address 192.168.50.1 192.168.50.9
+ip dhcp excluded-address 192.168.60.1 192.168.60.9
+!
+ip dhcp pool SALES
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ip dhcp pool WAREHOUSE
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ip dhcp pool LOGISTICS
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ip dhcp pool SHIPPING
+ network 192.168.40.0 255.255.255.0
+ default-router 192.168.40.1
+ip dhcp pool MANAGEMENT
+ network 192.168.50.0 255.255.255.0
+ default-router 192.168.50.1
+ip dhcp pool IT_DEPT
+ network 192.168.60.0 255.255.255.0
+ default-router 192.168.60.1
+!
+!
+ip routing
+!
+!
+!
+!
+username admin privilege 15 secret 5 $1$mERr$mAFCdR3tRjfHxTewc8Oq5.
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip domain-name fasttrack.local
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport trunk allowed vlan 10
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ switchport trunk allowed vlan 20
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ switchport trunk allowed vlan 30
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/4
+ switchport trunk allowed vlan 40
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/5
+ switchport trunk allowed vlan 50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/6
+ switchport trunk allowed vlan 60
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ no switchport
+ ip address 10.0.0.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 00d0.5864.5401
+ ip address 192.168.10.1 255.255.255.0
+!
+interface Vlan20
+ mac-address 00d0.5864.5402
+ ip address 192.168.20.1 255.255.255.0
+!
+interface Vlan30
+ mac-address 00d0.5864.5403
+ ip address 192.168.30.1 255.255.255.0
+!
+interface Vlan40
+ mac-address 00d0.5864.5404
+ ip address 192.168.40.1 255.255.255.0
+!
+interface Vlan50
+ mac-address 00d0.5864.5405
+ ip address 192.168.50.1 255.255.255.0
+!
+interface Vlan60
+ mac-address 00d0.5864.5406
+ ip address 192.168.60.1 255.255.255.0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.0.0.1 
+!
+ip flow-export version 9
+!
+!
+ip access-list extended BLOCK_TO_MGMT
+ deny ip 192.168.10.0 0.0.0.255 192.168.50.0 0.0.0.255
+ deny ip 192.168.20.0 0.0.0.255 192.168.50.0 0.0.0.255
+ deny ip 192.168.40.0 0.0.0.255 192.168.50.0 0.0.0.255
+ permit ip any any
+ip access-list standard SSH-ALLOW
+ permit 192.168.60.0 0.0.0.255
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ access-class SSH_ALLOW in
+ login local
+ transport input ssh
+line vty 5 15
+ access-class SSH_ALLOW in
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
