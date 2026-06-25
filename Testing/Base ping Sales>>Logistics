@@ -1,1 +1,29 @@
+Cisco Packet Tracer PC Command Line 1.0
+C:\>ping 192.168.30.10
+Pinging 192.168.30.10 with 32 bytes of data:
 
+Request timed out.
+Reply from 192.168.30.10: bytes=32 time=19ms TTL=127
+Reply from 192.168.30.10: bytes=32 time=11ms TTL=127
+Reply from 192.168.30.10: bytes=32 time=13ms TTL=127
+
+Ping statistics for 192.168.30.10:
+    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 11ms, Maximum = 19ms, Average = 14ms
+
+C:\>ping 192.168.30.10
+
+Pinging 192.168.30.10 with 32 bytes of data:
+
+Reply from 192.168.30.10: bytes=32 time<1ms TTL=127
+Reply from 192.168.30.10: bytes=32 time=11ms TTL=127
+Reply from 192.168.30.10: bytes=32 time=12ms TTL=127
+Reply from 192.168.30.10: bytes=32 time=12ms TTL=127
+
+Ping statistics for 192.168.30.10:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 12ms, Average = 8ms
+
+C:\>
