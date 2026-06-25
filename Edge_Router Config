@@ -1,0 +1,85 @@
+Edge_Router con0 is now available
+
+Press RETURN to get started.
+
+Edge_Router>
+Edge_Router>
+Edge_Router>
+Edge_Router>
+Edge_Router>en
+Edge_Router#congi ter
+Edge_Router#config
+Edge_Router#configure ter
+Edge_Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Edge_Router(config)#inter
+Edge_Router(config)#interface gig
+Edge_Router(config)#interface gigabitEthernet 0/1
+Edge_Router(config-if)#shutdown
+
+Edge_Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to administratively down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+
+Edge_Router(config-if)#ex
+Edge_Router(config)#interface gigabitEthernet 0/1
+Edge_Router(config-if)#no shut
+Edge_Router(config-if)#no shutdown 
+
+Edge_Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+Edge_Router(config-if)#ex
+Edge_Router(config)#
+Edge_Router(config)#
+Edge_Router(config)#ex
+Edge_Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Edge_Router#
+Edge_Router#
+Edge_Router#
+Edge_Router#ex
+
+Edge_Router con0 is now available
+
+
+Press RETURN to get started.
+
+Edge_Router>
+Edge_Router>
+Edge_Router>en
+Edge_Router#config
+Edge_Router#configure ter
+Edge_Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Edge_Router(config)#inter
+Edge_Router(config)#interface gig
+Edge_Router(config)#interface gigabitEthernet 0/1
+Edge_Router(config-if)#shutdown
+
+Edge_Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to administratively down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+
+Edge_Router(config-if)#ex
+Edge_Router(config)#interface gigabitEthernet 0/1
+Edge_Router(config-if)#no shut
+Edge_Router(config-if)#no shutdown 
+
+Edge_Router(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+ex
+Edge_Router(config)#read memo
+                     ^
+% Invalid input detected at '^' marker.
+	
+Edge_Router(config)#
+
+
