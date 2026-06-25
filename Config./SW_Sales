@@ -1,1 +1,26 @@
+Switch>
+Switch>
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW_Sales
+SW_Sales(config)#vlan 10
+SW_Sales(config-vlan)# name Sales_Floor
+SW_Sales(config-vlan)#exit
+SW_Sales(config)#interface GigabitEthernet0/1
+SW_Sales(config-if)# switchport mode trunk
+SW_Sales(config-if)# switchport trunk allowed vlan 10
+SW_Sales(config-if)# no shutdown
+SW_Sales(config-if)#interface range FastEthernet0/2 - 3
+SW_Sales(config-if-range)# switchport mode access
+SW_Sales(config-if-range)# switchport access vlan 10
+SW_Sales(config-if-range)# no shutdown
+SW_Sales(config-if-range)#end
+SW_Sales#write memory
+%SYS-5-CONFIG_I: Configured from console by console
 
+Building configuration...
+[OK]
+SW_Sales#
+SW_Sales#
+SW_Sales#ex
