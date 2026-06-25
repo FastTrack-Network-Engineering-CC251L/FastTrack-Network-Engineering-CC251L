@@ -1,0 +1,22 @@
+Switch>
+Switch>enable
+Switch#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW_Shipping
+SW_Shipping(config)#vlan 40
+SW_Shipping(config-vlan)# name Shipping
+SW_Shipping(config-vlan)#exit
+SW_Shipping(config)#interface GigabitEthernet0/1
+SW_Shipping(config-if)# switchport mode trunk
+SW_Shipping(config-if)# switchport trunk allowed vlan 40
+SW_Shipping(config-if)# no shutdown
+SW_Shipping(config-if)#interface range FastEthernet0/2 - 3
+SW_Shipping(config-if-range)# switchport mode access
+SW_Shipping(config-if-range)# switchport access vlan 40
+SW_Shipping(config-if-range)# no shutdown
+SW_Shipping(config-if-range)#end
+SW_Shipping#write memory
+%SYS-5-CONFIG_I: Configured from console by console
+
+Building configuration...
+[OK]
