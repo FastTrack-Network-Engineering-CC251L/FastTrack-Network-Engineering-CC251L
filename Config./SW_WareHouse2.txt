@@ -1,0 +1,18 @@
+SW_Warehouse>
+SW_Warehouse>en
+SW_Warehouse#config ter
+SW_Warehouse#config terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW_Warehouse(config)#interface
+SW_Warehouse(config)#interface fas
+SW_Warehouse(config)#interface fastEthernet 0/4
+SW_Warehouse(config-if)#switchport mode access
+SW_Warehouse(config-if)#switchport access vlan 20
+SW_Warehouse(config-if)#no shutdown
+SW_Warehouse(config-if)#end
+SW_Warehouse#
+%SYS-5-CONFIG_I: Configured from console by console
+
+SW_Warehouse#write memo
+Building configuration...
+[OK]
