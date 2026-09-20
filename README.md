@@ -167,4 +167,4 @@ CCP-CNS2026/
 
 ---
 
-*CCP-CNS2026 — Computer Networks Lab — Muhammad Fahad Irshad*
+*CCP-CNS2026 — Computer Networks Lab - UMT Lahore*
