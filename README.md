@@ -18,9 +18,9 @@ The network was designed and simulated in **Cisco Packet Tracer** using a Multil
 
 | Name 
 |---|
-| Muhammad Rehan Bhatt |
+| Muhammad Rehan Bhatti |
 | Muhammad Ali Yasir |
-
+| Muhammad Ali Waqar |
 
 ---
 
