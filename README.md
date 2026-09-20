@@ -1,14 +1,16 @@
-# FastTrack-Network-Engineering-CC251L
-Complex Computing Problem (CCP) : FastTrack Retail and Logistics System backed by computer network based on Cisco Packet Tracer TM
-<img width="1600" height="788" alt="image" src="https://github.com/user-attachments/assets/2c8177fe-2ff8-4216-963e-d4ac015beb59" />
+<img width="957" height="194" alt="image" src="https://github.com/user-attachments/assets/ad198764-63ba-446f-aa17-90e2f75f584a" />
+
+---
+Network Topology Interface 
+<img width="957" height="470" alt="image" src="https://github.com/user-attachments/assets/2c8177fe-2ff8-4216-963e-d4ac015beb59" />
 # FastTrack Retail & Logistics — Enterprise Network
-### CCP-CNS2026 | Computer Networks Lab
+### CCP-CNS2026 | Computer Networks
 
 ---
 
 ## Project Overview
 
-This repository contains the complete implementation of an enterprise network for **FastTrack Retail & Logistics Co.**, built as a Complex Computing Problem (CCP) for the Computer Networks course (CNS2026) under **Muhammad Fahad Irshad**.
+This repository contains the complete implementation of an enterprise network for **FastTrack Retail & Logistics Co.**, built as a Complex Computing Problem (CCP) for the Computer Networks course (CNS2026)
 
 The network was designed and simulated in **Cisco Packet Tracer** using a Multilayer Switch (MLS 3560-24PS) as the core device, providing inter-VLAN routing, DHCP, access control, SSH management, and dual ISP failover.
 
