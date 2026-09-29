@@ -1,8 +1,10 @@
 <img width="957" height="194" alt="image" src="https://github.com/user-attachments/assets/ad198764-63ba-446f-aa17-90e2f75f584a" />
 
 ---
-Network Topology Interface 
-<img width="957" height="470" alt="image" src="https://github.com/user-attachments/assets/2c8177fe-2ff8-4216-963e-d4ac015beb59" />
+## Network Topology Interface
+![Network Topology](network_topology_flow.svg)
+## CPT Interface
+<img width="1561" height="763" alt="ccp topology" src="https://github.com/user-attachments/assets/12558dff-9c36-46c6-9515-b85db5bf1ffe" />
 # FastTrack Retail & Logistics — Enterprise Network
 ### CCP-CNS2026 | Computer Networks
 
