@@ -1,0 +1,29 @@
+C:\>ping 8.8.8.8
+
+Pinging 8.8.8.8 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=253
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=253
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+C:\>ping 8.8.8.8
+
+Pinging 8.8.8.8 with 32 bytes of data:
+
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=253
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=253
+Reply from 8.8.8.8: bytes=32 time<1ms TTL=253
+Reply from 8.8.8.8: bytes=32 time=1ms TTL=253
+
+Ping statistics for 8.8.8.8:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 1ms, Average = 0ms
+
+C:\>
